@@ -1,1 +1,0 @@
-# Women Artists At Work
