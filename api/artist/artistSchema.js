@@ -4,7 +4,8 @@ const { Schema } = mongoose;
 const artistSchema = new Schema({
   firstName: String,
   lastName: String,
-  artField: String,
+  profileImg: String,
+  artField: [String],
   yearsActive: {
     from: String,
     until: String,
@@ -15,6 +16,7 @@ const artistSchema = new Schema({
       title: String,
       year: String,
       url: String,
+      info: String,
     },
   ],
 });
