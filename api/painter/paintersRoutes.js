@@ -17,20 +17,20 @@ router
 router
   .route("/add")
   .post(async (req, res) => {
-    const {firstName, lastName, profileImg, artField, yearsActive, about, famousWorks} = req.body;
+    const {firstName, lastName, profileImg, artField, yearBorn, yearDied, about, period, styles, selectedWorks} = req.body;
+    
     try {
-      
       const newPainter = {
         firstName,
         lastName,
         profileImg,
         artField,
-        yearsActive: {
-         from: yearsActive.from,
-         until: yearsActive.until,
-        },
+        yearBorn,
+        yearDied,
         about,
-        famousWorks,
+        period,
+        styles,
+        selectedWorks,
       };
 
       const painter = await createPainter(newPainter);

@@ -6,12 +6,12 @@ const artistSchema = new Schema({
   lastName: String,
   profileImg: String,
   artField: [String],
-  yearsActive: {
-    from: String,
-    until: String,
-  },
+  yearBorn: String,
+  yearDied: String,
   about: String,
-  famousWorks: [
+  period: String,
+  styles: [String],
+  selectedWorks: [
     {
       title: String,
       year: String,
